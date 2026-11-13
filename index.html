@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rehoboth Technology</title>
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Leaflet CSS – loaded from local file, no internet required -->
+  <link rel="stylesheet" href="leaflet/leaflet.css" />
+</head>
+<body>
+
+  <!-- ========== HEADER / NAV ========== -->
+  <header>
+    <div class="container nav-inner">
+      <div class="logo">
+        <img
+          src="images/logo.png"
+          alt="Rehoboth logo"
+          class="logo-img"
+          onerror="this.style.display='none';this.nextElementSibling.style.display='inline';"
+        />
+        <span class="logo-icon-fallback" style="display:none;">⚡</span>
+        <span class="logo-text" data-key="brand">Rehoboth</span>
+      </div>
+
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#home"     data-key="nav_home">Home</a></li>
+          <li><a href="#about"    data-key="nav_about">About</a></li>
+          <li><a href="#services" data-key="nav_services">Services</a></li>
+          <li><a href="#contact"  data-key="nav_contact">Contact</a></li>
+          <li><a href="#map-section" data-key="nav_map">Map</a></li>
+        </ul>
+      </nav>
+
+      <button class="lang-toggle" id="langToggle" aria-label="Switch language">
+        <span id="langLabel">አማርኛ</span>
+      </button>
+
+      <button class="hamburger" id="hamburger" aria-label="Open menu">&#9776;</button>
+    </div>
+
+    <!-- Mobile menu -->
+    <div class="mobile-menu" id="mobileMenu">
+      <ul>
+        <li><a href="#home"     data-key="nav_home"     class="mob">Home</a></li>
+        <li><a href="#about"    data-key="nav_about"    class="mob">About</a></li>
+        <li><a href="#services" data-key="nav_services" class="mob">Services</a></li>
+        <li><a href="#contact"  data-key="nav_contact"  class="mob">Contact</a></li>
+        <li><a href="#map-section" data-key="nav_map" class="mob">Map</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- ========== HERO ========== -->
+  <section id="home" class="hero">
+    <div class="hero-overlay"></div>
+
+    <!-- Floating 3-D orbs -->
+    <div class="orb orb1"></div>
+    <div class="orb orb2"></div>
+    <div class="orb orb3"></div>
+
+    <div class="container hero-content">
+
+      <!-- Left: company text -->
+      <div class="hero-text">
+        <h1 data-key="hero_title">Rehoboth Technology<br>Electronic Accessory Sales &amp; Maintenance</h1>
+        <p class="hero-sub" data-key="hero_sub">Your trusted partner for quality electronic accessories and expert repair services.</p>
+        <a href="#services" class="btn-primary" data-key="hero_cta">Explore Our Services</a>
+      </div>
+
+      <!-- Right: owner portrait -->
+      <div class="hero-portrait-wrap">
+        <div class="portrait-ring">
+          <div class="portrait-frame">
+            <img
+              src="images/owner.jpg"
+              alt="Owner of Rehoboth"
+              class="owner-img"
+              onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"
+            />
+            <!-- Fallback initials shown when image is missing -->
+            <div class="owner-fallback" style="display:none;">R</div>
+          </div>
+        </div>
+        <p class="owner-label" data-key="owner_label">Founder &amp; Owner</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========== ABOUT ========== -->
+  <section id="about" class="section about">
+    <div class="container">
+      <h2 class="section-title" data-key="about_title">About Us</h2>
+      <div class="about-grid">
+        <div class="about-text">
+          <p data-key="about_p1">
+            Rehoboth Technology is a dedicated electronics business
+            committed to providing customers with high-quality accessories and dependable repair services.
+            We combine knowledge with hands on technical expertise to keep your devices running at their best.
+          </p>
+          <p data-key="about_p2">
+            Beyond maintenance, we also offer a wide selection of electronic accessories for sale, and we
+            exchange of used electronics giving, customers flexible options to upgrade or replace
+            their devices affordably.
+          </p>
+          <p data-key="about_p3">
+            Our team takes pride in honest assessments, fair pricing, and building long-term relationships
+            with every customer we serve.
+          </p>
+        </div>
+        <div class="about-stats">
+          <div class="stat-card">
+            <span class="stat-num">500<sup>+</sup></span>
+            <span class="stat-label" data-key="stat1">Satisfied Customers</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-num">8<sup>+</sup></span>
+            <span class="stat-label" data-key="stat2">Years of Experience</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-num">1000<sup>+</sup></span>
+            <span class="stat-label" data-key="stat3">Devices Repaired</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SERVICES ========== -->
+  <section id="services" class="section services">
+    <div class="container">
+      <h2 class="section-title" data-key="services_title">Our Services</h2>
+      <p class="section-sub" data-key="services_sub">
+        We offer a full range of electronic accessory and maintenance services to meet your needs.
+      </p>
+
+      <div class="services-grid">
+
+        <div class="service-card">
+          <div class="service-icon">
+            <img src="images/services/repair.jpg" alt="Device Repair" class="service-img"
+              onerror="this.style.display='none';this.nextElementSibling.style.display='block';" />
+            <span class="service-icon-fallback" style="display:none;">🔧</span>
+          </div>
+          <h3 data-key="s1_title">Device Repair &amp; Maintenance</h3>
+          <p data-key="s1_desc">
+            Comprehensive repair services for smart TVs, smartphones, tablets, laptops, and any other electronic devices.
+            We diagnose faults accurately and restore your device to full working order.
+          </p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">
+            <img src="images/services/sales.jpg" alt="Accessory Sales" class="service-img"
+              onerror="this.style.display='none';this.nextElementSibling.style.display='block';" />
+            <span class="service-icon-fallback" style="display:none;">🛒</span>
+          </div>
+          <h3 data-key="s2_title">Accessory Sales</h3>
+          <p data-key="s2_desc">
+            A original selection of genuine and compatible accessories: chargers, cables, earphones,
+            cases, screen protectors,solar panels, power bank and more available for you in our store.
+          </p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">
+            <img src="images/services/battery.jpg" alt="Battery Replacement" class="service-img"
+              onerror="this.style.display='none';this.nextElementSibling.style.display='block';" />
+            <span class="service-icon-fallback" style="display:none;">🔋</span>
+          </div>
+          <h3 data-key="s3_title">Battery Replacement</h3>
+          <p data-key="s3_desc">
+            Fast and reliable battery replacement for phones, laptops, and portable devices using
+            quality-tested cells to extend your device's lifespan.
+          </p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">
+            <img src="images/services/screen.jpg" alt="Screen and Hardware Repair" class="service-img"
+              onerror="this.style.display='none';this.nextElementSibling.style.display='block';" />
+            <span class="service-icon-fallback" style="display:none;">🖥️</span>
+          </div>
+          <h3 data-key="s4_title">Screen &amp; Hardware Repair</h3>
+          <p data-key="s4_desc">
+            Cracked screens, damaged ports, faulty buttons, and hardware failures repaired with
+            precision and care by our experienced technicians.
+          </p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">
+            <img src="images/services/exchange.jpg" alt="Device Exchange" class="service-img"
+              onerror="this.style.display='none';this.nextElementSibling.style.display='block';" />
+            <span class="service-icon-fallback" style="display:none;">🔄</span>
+          </div>
+          <h3 data-key="s5_title">Device Exchange</h3>
+          <p data-key="s5_desc">
+            Looking to upgrade? We facilitate device exchange so you can trade in your used electronics
+            toward a newer model or accessor a convenient and affordable option.
+          </p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">
+            <img src="images/services/diagnosis.jpg" alt="Diagnosis and Consultation" class="service-img"
+              onerror="this.style.display='none';this.nextElementSibling.style.display='block';" />
+            <span class="service-icon-fallback" style="display:none;">📋</span>
+          </div>
+          <h3 data-key="s6_title">Diagnosis &amp; Consultation</h3>
+          <p data-key="s6_desc">
+            Not sure what's wrong with your device? Bring it in for a free diagnostic assessment
+            and honest consultation from our knowledgeable team.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CONTACT ========== -->
+  <section id="contact" class="section contact">
+    <div class="container">
+      <h2 class="section-title" data-key="contact_title">Contact Us</h2>
+      <p class="section-sub" data-key="contact_sub">
+        Visit us or reach out, we're happy to help.
+      </p>
+
+      <div class="contact-grid">
+        <div class="contact-card">
+          <div class="contact-icon">📍</div>
+          <h3 data-key="c1_title">Location</h3>
+          <p data-key="c1_detail">KAFA, BONGA</p>
+        </div>
+        <div class="contact-card">
+          <div class="contact-icon">📞</div>
+          <h3 data-key="c2_title">Phone</h3>
+          <p><a href="tel:+251000000000" data-key="c2_detail">+251 91 299 1968</a></p>
+        </div>
+        <div class="contact-card">
+          <div class="contact-icon">🕐</div>
+          <h3 data-key="c3_title">Working Hours</h3>
+          <p data-key="c3_detail">Mon – Sat: 8:30 AM – 6:30 PM</p>
+        </div>
+        <div class="contact-card">
+          <div class="contact-icon">✉️</div>
+          <h3 data-key="c4_title">Email</h3>
+          <p><a href="mailto:info@rehoboth.com" data-key="c4_detail">rehoboth@gmail.com</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FIND US ON THE MAP ========== -->
+  <section id="map-section" class="section map-section">
+    <div class="container">
+      <h2 class="section-title" data-key="map_title">Find Us</h2>
+      <p class="section-sub" data-key="map_sub">
+        Come visit us in Bonga, Kafa Zone, Ethiopia.
+      </p>
+    </div>
+
+    <!-- Map container – explicit height required by Leaflet -->
+    <div id="map" role="region" aria-label="Store location map"></div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer>
+    <div class="container footer-inner">
+
+      <!-- Logo + brand -->
+      <div class="footer-brand">
+        <div class="footer-logo-wrap">
+          <img
+            src="images/logo.png"
+            alt="Rehoboth logo"
+            class="footer-logo-img"
+            onerror="this.style.display='none';this.nextElementSibling.style.display='inline';"
+          />
+          <span class="footer-logo-fallback" style="display:none;">⚡</span>
+        </div>
+        <span class="footer-brand-name" data-key="brand">Rehoboth</span>
+      </div>
+
+      <p class="footer-tagline" data-key="footer_tagline">Electronic Accessory Sales &amp; Maintenance</p>
+
+      <div class="footer-divider"></div>
+
+      <p class="footer-copy" data-key="footer_copy">&copy; 2026 Rehoboth Technology. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Leaflet JS – loaded from local file, no internet required -->
+  <script src="leaflet/leaflet.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
